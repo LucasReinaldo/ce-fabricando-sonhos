@@ -7,13 +7,10 @@ export default createGlobalStyle`
     --secondary-color: #FF890c;
     --tertiary-color: #FF9D0C;
     --quaternary-color: #003049;
+    --quaternary-color-dark: #002335;
     --background-color: #f7f7f7;
 
     --text-color: #3F3F3F;
-
-    --color--primary: hsl(var(--primary-hue), 100%, 44%);
-    --color--primary--hover: hsl(var(--primary-hue), 100%, 39%);
-    --color--primary--active: hsl(var(--primary-hue), 84%, 30%);
 
     /* ... */
     --border-color: #EDEDED;
