@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
@@ -17,8 +16,9 @@ import Footer from "@/components/Footer";
 import DesignedBy from "@/components/DesignedBy";
 
 import {
-  ImageContainer,
+  Container,
   Main,
+  Wrapper,
   CardContainer,
   PathContainer,
   CompanyContainer,
@@ -51,41 +51,39 @@ export default function Home({
   if (router.isFallback) return <p>Loading...</p>;
   return (
     <>
-      <Head>
-        <title>CE Fabricando Sonhos</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Navbar />
-      <ImageContainer>
-        <Image src="/background.png" unsized />
-      </ImageContainer>
-      <Main>
-        <Image className="first-wave" src="/wave-orange.svg" unsized />
-        <CardContainer>
-          {cards.map(({ data }, index) => (
-            <Card key={index}>
-              {PrismicDOM.RichText.asText(data.card_title)}
-            </Card>
-          ))}
-        </CardContainer>
-        <PathContainer>
-          <Path routine={routine} afternoon={afternoon} morning={morning} />
-        </PathContainer>
-        <Image className="second-wave" src="/wave-blue.svg" unsized />
-        <CompanyContainer>
-          <Company about={about} />
-        </CompanyContainer>
-        <ClassesContainer>
-          <Classes classes={classes} />
-        </ClassesContainer>
-        <MapContainer>
-          <DynamicMap />
-        </MapContainer>
-        <FooterContainer>
-          <Footer />
-          <DesignedBy />
-        </FooterContainer>
-      </Main>
+      <Container>
+        <Navbar />
+        <Wrapper>
+          <Main>
+            <Image className="background" src="/background.png" unsized />
+            <Image className="first-wave" src="/wave-orange.svg" unsized />
+            <CardContainer>
+              {cards.map(({ data }, index) => (
+                <Card key={index}>
+                  {PrismicDOM.RichText.asText(data.card_title)}
+                </Card>
+              ))}
+            </CardContainer>
+            <PathContainer>
+              <Path routine={routine} afternoon={afternoon} morning={morning} />
+            </PathContainer>
+            <Image className="second-wave" src="/wave-blue.svg" unsized />
+            <CompanyContainer>
+              <Company about={about} />
+            </CompanyContainer>
+            <ClassesContainer>
+              <Classes classes={classes} />
+            </ClassesContainer>
+            <MapContainer>
+              <DynamicMap />
+            </MapContainer>
+            <FooterContainer>
+              <Footer />
+              <DesignedBy />
+            </FooterContainer>
+          </Main>
+        </Wrapper>
+      </Container>
     </>
   );
 }

@@ -1,22 +1,26 @@
 import styled from "styled-components";
 
-export const ImageContainer = styled.div`
-  margin-top: 8rem;
+export const Container = styled.div`
+  flex: 1;
+  display: flex;
+  max-width: 144rem;
+`;
 
-  div img {
-    display: flex;
-    max-width: 144rem;
-  }
-
-  @media (min-width: 2000px) {
-    div img {
-      max-width: 200rem;
-    }
-  }
+export const Wrapper = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 `;
 
 export const Main = styled.main`
   position: relative;
+  margin-top: 8rem;
+
+  div img.background {
+    display: flex;
+    max-width: 144rem;
+  }
 
   div img.first-wave {
     background: var(--primary-color);

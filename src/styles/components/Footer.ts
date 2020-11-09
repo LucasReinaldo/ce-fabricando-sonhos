@@ -6,10 +6,6 @@ export const Container = styled.div`
   width: 90%;
   margin: 0 auto 2.4rem;
   gap: 4rem;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-  }
 `;
 
 export const FormContainer = styled.div`
@@ -85,27 +81,6 @@ export const SocialContainer = styled.div`
 
     span {
       font-size: 2rem;
-    }
-  }
-
-  @media (max-width: 900px) {
-    flex-direction: row;
-    
-    div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.8rem;
-      margin: 0.4rem 0;
-
-      svg {
-        width: 3.2rem;
-        height: 3.2rem;
-      }
-
-      span {
-        font-size: 1.8rem;
-      }
     }
   }
 `;

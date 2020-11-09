@@ -12,10 +12,6 @@ export const Header = styled.nav`
   background-color: var(--primary-color);
   z-index: 10;
 
-  @media (max-width: 800px) {
-    font-size: 1.6rem;
-  }
-
   img {
     display: flex;
     width: 6rem;
@@ -78,12 +74,6 @@ export const Header = styled.nav`
           p {
             font-size: 1.6rem;
           }
-        }
-      }
-
-      @media (max-width: 800px) {
-        div {
-          display: none;
         }
       }
     }

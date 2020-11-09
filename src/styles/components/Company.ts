@@ -19,10 +19,6 @@ export const TextContainer = styled.div`
   p {
     text-align: justify;
   }
-
-  @media (max-width: 920px) {
-    margin-right: 0;
-  }
 `;
 
 export const ImageContainer = styled.div`

@@ -5,9 +5,4 @@ export const Container = styled.div`
   height: 60vh;
   position: relative;
   display: flex;
-  max-width: 200rem;
-
-  @media (max-width: 400px) {
-    height: 50vh;
-  }
 `;
