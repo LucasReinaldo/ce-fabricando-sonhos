@@ -7,7 +7,7 @@ export default createGlobalStyle`
     --secondary-color: #FF890c;
     --tertiary-color: #FF9D0C;
     --quaternary-color: #003049;
-    --background-color: #EDEDED;
+    --background-color: #f7f7f7;
 
     --text-color: #3F3F3F;
 
@@ -31,21 +31,43 @@ export default createGlobalStyle`
       box-sizing: border-box;
     }
 
-    body{
-      background: var(--primary-color);
+    body {
+      background: var(--background-color);
       color: var(--text-color);
       min-height: 100vh;
-      max-width: 100vw;
+      max-width: 144rem;
       -webkit-font-smoothing: antialiased;
+      margin: auto;
     }
 
-    body, input, textarea, button{
+    body, input, textarea, button {
       font: 1.6rem 'Poppins', sans-serif;
     }
 
     h1, h2, h3, h4, h5, h6, strong {
       font-weight: 600;
       font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 3.2rem;
+    }
+
+    h3 {
+      font-size: 2.8rem;
+    }
+
+    h4 {
+      font-size: 2rem;
+    }
+
+    h5 {
+      font-size: 1.8rem;
     }
 
     button, a {

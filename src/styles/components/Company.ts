@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  flex: 1;
   display: flex;
-  margin: auto;
+  margin: 0 auto 4.8rem;
   width: 90%;
+  gap: 4.8rem;
 
   @media (max-width: 920px) {
     gap: 1.6rem;
@@ -15,19 +15,15 @@ export const Container = styled.div`
 
 export const TextContainer = styled.div`
   flex-direction: column;
-  margin-right: 4.8rem;
-  text-align: justify;
+
+  p {
+    text-align: justify;
+  }
 
   @media (max-width: 920px) {
     margin-right: 0;
   }
 `;
-
-export const Title = styled.h1`
-  font-weight: 700;
-`;
-
-export const Description = styled.p``;
 
 export const ImageContainer = styled.div`
   div,

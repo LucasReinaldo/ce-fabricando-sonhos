@@ -1,7 +1,7 @@
 import PrismicDOM from "prismic-dom";
 import { Document } from "prismic-javascript/types/documents";
 
-import { Container, Section } from "@/styles/components/Path";
+import { Container, Description, Section } from "@/styles/components/Path";
 
 interface PathProps {
   routine: Document[];
@@ -15,13 +15,13 @@ export default function Path({ routine, morning, afternoon }: PathProps) {
   return (
     <Container>
       <h1>{PrismicDOM.RichText.asText(titulo)}</h1>
-      <p>{PrismicDOM.RichText.asText(descricao)}</p>
+      <Description>{PrismicDOM.RichText.asText(descricao)}</Description>
       <Section>
-        <h1>Manhã</h1>
+        <h2>Manhã</h2>
         <ol>
           {morning.map(({ data }, index) => (
             <li key={index}>
-              <h3>{PrismicDOM.RichText.asText(data.modalidade)}</h3>
+              <h4>{PrismicDOM.RichText.asText(data.modalidade)}</h4>
               {PrismicDOM.RichText.asText(data.horario)}
             </li>
           ))}
@@ -29,11 +29,11 @@ export default function Path({ routine, morning, afternoon }: PathProps) {
       </Section>
 
       <Section>
-        <h1>Tarde</h1>
+        <h2>Tarde</h2>
         <ol>
           {afternoon.map(({ data }, index) => (
             <li key={index}>
-              <h3>{PrismicDOM.RichText.asText(data.modalidade)}</h3>
+              <h4>{PrismicDOM.RichText.asText(data.modalidade)}</h4>
               {PrismicDOM.RichText.asText(data.horario)}
             </li>
           ))}

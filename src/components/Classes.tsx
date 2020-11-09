@@ -7,8 +7,6 @@ import {
   Section,
   ImageContainer,
   TextContainer,
-  Title,
-  Description,
 } from "@/styles/components/Classes";
 
 interface ClassesProps {
@@ -24,10 +22,8 @@ export default function Classes({ classes }: ClassesProps) {
             <Image src={data.extra_classes_imagem.url} unsized />
           </ImageContainer>
           <TextContainer>
-            <Title>{PrismicDOM.RichText.asText(data.titulo)}</Title>
-            <Description>
-              {PrismicDOM.RichText.asText(data.descricao)}
-            </Description>
+            <h1>{PrismicDOM.RichText.asText(data.titulo)}</h1>
+            <p>{PrismicDOM.RichText.asText(data.descricao)}</p>
           </TextContainer>
         </Section>
       ))}

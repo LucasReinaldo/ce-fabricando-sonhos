@@ -1,25 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 6rem auto;
+  margin: auto;
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.2rem;
+`;
 
-  h1 {
-    font-weight: 700;
-    font-size: 3.2rem;
-  }
+export const Description = styled.p`
+  text-align: justify;
 `;
 
 export const Section = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 6rem auto;
+  margin: 4.8rem auto 0;
   overflow-x: hidden;
   position: relative;
 
-  h1 {
+  h2 {
     text-align: center;
-    font-weight: 600;
     margin-bottom: 1.6rem;
   }
 
@@ -27,7 +28,7 @@ export const Section = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    color: #FFF;
+    color: var(--primary-color);
 
     li {
       flex: 1;
@@ -37,12 +38,12 @@ export const Section = styled.div`
 
       &::before {
         content: "";
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 2rem;
         display: flex;
-        border: 1.4rem solid var(--quaternary-color);
+        border: 1rem solid var(--quaternary-color);
         border-radius: 50%;
-        background: #EAE2B7;
+        background: #eae2b7;
         margin: auto;
       }
 

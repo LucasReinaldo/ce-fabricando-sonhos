@@ -12,6 +12,8 @@ export default function Map() {
         center={[LAT, LONG]}
         zoom={15}
         style={{ width: "100%", height: "100%" }}
+        scrollWheelZoom={false}
+        doubleClickZoom
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

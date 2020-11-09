@@ -5,8 +5,6 @@ import { Document } from "prismic-javascript/types/documents";
 import {
   Container,
   TextContainer,
-  Title,
-  Description,
   ImageContainer,
 } from "@/styles/components/Company";
 
@@ -20,8 +18,8 @@ export default function Company({ about }: CompanyProps) {
   return (
     <Container>
       <TextContainer>
-        <Title>{PrismicDOM.RichText.asText(titulo)}</Title>
-        <Description>{PrismicDOM.RichText.asText(descricao)}</Description>
+        <h1>{PrismicDOM.RichText.asText(titulo)}</h1>
+        <p>{PrismicDOM.RichText.asText(descricao)}</p>
       </TextContainer>
       <ImageContainer>
         <Image src={sobre_imagem.url} unsized />

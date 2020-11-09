@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  margin: auto;
   width: 90%;
   flex-direction: column;
+  margin: 4rem auto;
 `;
 
 export const Section = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 4rem 0;
+  margin: 3.2rem 0;
   gap: 4.8rem;
 
   &:nth-child(even) {
@@ -31,7 +31,6 @@ export const Section = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  div,
   img {
     flex: 1;
     display: flex;
@@ -46,11 +45,8 @@ export const ImageContainer = styled.div`
 
 export const TextContainer = styled.div`
   flex-direction: column;
-  text-align: justify;
+  
+  p {
+    text-align: justify;
+  }
 `;
-
-export const Title = styled.h1`
-  font-weight: 700;
-`;
-
-export const Description = styled.p``;

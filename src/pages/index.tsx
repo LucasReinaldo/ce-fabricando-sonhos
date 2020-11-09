@@ -18,9 +18,7 @@ import DesignedBy from "@/components/DesignedBy";
 
 import {
   ImageContainer,
-  Container,
   Main,
-  WaveContainer,
   CardContainer,
   PathContainer,
   CompanyContainer,
@@ -46,7 +44,7 @@ export default function Home({
   afternoon,
   morning,
   about,
-  classes
+  classes,
 }: HomeProps) {
   const router = useRouter();
 
@@ -59,42 +57,35 @@ export default function Home({
       </Head>
       <Navbar />
       <ImageContainer>
-        <Image src="/background.jpg" unsized />
+        <Image src="/background.png" unsized />
       </ImageContainer>
-      <Container>
-        <Main>
-          <WaveContainer>
-            <Image className="first-wave" src="/wave-orange.svg" unsized />
-          </WaveContainer>
-          <CardContainer>
-            {cards.map(({ data }, index) => (
-              <Card key={index}>
-                {PrismicDOM.RichText.asText(data.card_title)}
-              </Card>
-            ))}
-          </CardContainer>
-          <PathContainer>
-            <Path routine={routine} afternoon={afternoon} morning={morning} />
-          </PathContainer>
-          <WaveContainer>
-            <Image className="second-wave" src="/wave-blue.svg" unsized />
-          </WaveContainer>
-          <CompanyContainer>
-            <Company about={about} />
-          </CompanyContainer>
-          <ClassesContainer>
-            <Classes classes={classes} />
-          </ClassesContainer>
-          <MapContainer>
-            <DynamicMap />
-          </MapContainer>
-          <FooterContainer>
-            <Footer />
-            <hr />
-            <DesignedBy />
-          </FooterContainer>
-        </Main>
-      </Container>
+      <Main>
+        <Image className="first-wave" src="/wave-orange.svg" unsized />
+        <CardContainer>
+          {cards.map(({ data }, index) => (
+            <Card key={index}>
+              {PrismicDOM.RichText.asText(data.card_title)}
+            </Card>
+          ))}
+        </CardContainer>
+        <PathContainer>
+          <Path routine={routine} afternoon={afternoon} morning={morning} />
+        </PathContainer>
+        <Image className="second-wave" src="/wave-blue.svg" unsized />
+        <CompanyContainer>
+          <Company about={about} />
+        </CompanyContainer>
+        <ClassesContainer>
+          <Classes classes={classes} />
+        </ClassesContainer>
+        <MapContainer>
+          <DynamicMap />
+        </MapContainer>
+        <FooterContainer>
+          <Footer />
+          <DesignedBy />
+        </FooterContainer>
+      </Main>
     </>
   );
 }
@@ -119,9 +110,9 @@ export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
     { orderings: "[document.first_publication_date]" }
   );
 
-  const about = await client().query(
-    [Prismic.Predicates.at("document.type", "about")]
-  );
+  const about = await client().query([
+    Prismic.Predicates.at("document.type", "about"),
+  ]);
 
   const classes = await client().query(
     [Prismic.Predicates.at("document.type", "extra_classes")],
