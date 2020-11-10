@@ -9,7 +9,11 @@ import {
 import {
   Container,
   FormContainer,
+  ContactContainer,
   SocialContainer,
+  OpenHoursContainer,
+  WeekDays,
+  WeekHours,
 } from "@/styles/components/Footer";
 
 export default function Footer() {
@@ -31,7 +35,10 @@ export default function Footer() {
               <input id="email" placeholder="Seu e-mail" />
             </div>
             <div className="input-block">
-              <input id="subject" placeholder="Assunto (visita, horário de funcionamento...)" />
+              <input
+                id="subject"
+                placeholder="Assunto (visita, horário de funcionamento...)"
+              />
             </div>
             <div className="input-block textarea">
               <textarea
@@ -40,31 +47,38 @@ export default function Footer() {
                 placeholder="Escreva aqui sua mensagem (máximo de 300 caracteres)."
               />
             </div>
+            <button>Enviar</button>
           </fieldset>
         </form>
       </FormContainer>
-      <SocialContainer>
-        <div className="icon">
-          <IoLogoInstagram />
-          <span>@cefabricandosonhos</span>
-        </div>
-        <div className="icon">
-          <IoLogoFacebook />
-          <span>Centro Educacional Fabricando Sonhos</span>
-        </div>
-        <div className="icon">
-          <IoMdMail />
-          <span>cefabricandosonhos@gmail.com</span>
-        </div>
-        <div className="icon">
-          <IoIosCall />
-          <span>48 3259-1928</span>
-        </div>
-        <div className="icon">
-          <IoMdMap />
-          <span>Rua Killiano Hammes, 1300</span>
-        </div>
-      </SocialContainer>
+      <ContactContainer>
+        <SocialContainer>
+          <div className="icon">
+            <IoLogoInstagram />
+            <span>@cefabricandosonhos</span>
+          </div>
+          <div className="icon">
+            <IoLogoFacebook />
+            <span>Centro Educacional Fabricando Sonhos</span>
+          </div>
+          <div className="icon">
+            <IoMdMail />
+            <span>cefabricandosonhos@gmail.com</span>
+          </div>
+          <div className="icon">
+            <IoIosCall />
+            <span>48 3259-1928</span>
+          </div>
+          <div className="icon">
+            <IoMdMap />
+            <span>Rua Killiano Hammes, 1300</span>
+          </div>
+        </SocialContainer>
+        <OpenHoursContainer>
+          <WeekDays>Segunda - Sexta</WeekDays>
+          <WeekHours>07:00 - 18:30</WeekHours>
+        </OpenHoursContainer>
+      </ContactContainer>
     </Container>
   );
 }

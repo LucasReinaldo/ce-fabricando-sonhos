@@ -72,5 +72,4 @@ export const MapContainer = styled.div`
 export const FooterContainer = styled.footer`
   background: var(--quaternary-color);
   color: var(--primary-color);
-  padding-top: 4rem;
 `;

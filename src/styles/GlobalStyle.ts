@@ -39,6 +39,7 @@ export default createGlobalStyle`
 
     body, input, textarea, button {
       font: 1.6rem 'Poppins', sans-serif;
+      color: var(--text-color);
     }
 
     h1, h2, h3, h4, h5, h6, strong {

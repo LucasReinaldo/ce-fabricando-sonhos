@@ -10,6 +10,7 @@ export const Container = styled.div`
   width: 90%;
   max-width: 130rem;
   margin: auto;
+  justify-content: space-between;
 `;
 
 export const Header = styled.nav`
@@ -27,13 +28,13 @@ export const Header = styled.nav`
   div img {
     display: flex;
     max-width: 6rem;
+    cursor: pointer;
   }
 `;
 
 export const MenuHamburguer = styled.div<UIProps>`
   div.items-list {
     display: flex;
-
     ul {
       display: flex;
       list-style: none;
@@ -77,6 +78,11 @@ export const MenuHamburguer = styled.div<UIProps>`
         text-transform: uppercase;
         font-weight: 500;
         color: var(--primary-color);
+        font-size: 2.4rem;
+      }
+
+      a:hover {
+        background: transparent;
       }
 
       li:active {
@@ -90,10 +96,11 @@ export const HamburguerIcon = styled.div<UIProps>`
   width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 15px;
+  top: 25px;
   right: 20px;
   z-index: 20;
   display: none;
+
 
   @media (max-width: 768px) {
     display: flex;

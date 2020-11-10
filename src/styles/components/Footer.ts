@@ -1,15 +1,21 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  flex: 1;
   display: flex;
   width: 90%;
   margin: 0 auto 2.4rem;
   gap: 4rem;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const FormContainer = styled.div`
-  flex: 1;
+  flex: 0.6;
+  margin-top: 4rem;
+  display: flex;
 
   form {
     flex: 1;
@@ -28,15 +34,14 @@ export const FormContainer = styled.div`
         display: flex;
         flex-direction: row;
         width: 100%;
-        flex: 1;
         gap: 1.6rem;
       }
 
       .input-block input,
       .input-block textarea {
         width: 100%;
-        background: #f5f8fa;
-        border: 0.1rem solid #d3e2e5;
+        background: var(--primary-color);
+        border: 0.1rem solid var(--border-color);
         border-radius: 0.8rem;
         outline: none;
         font-weight: 600;
@@ -59,6 +64,26 @@ export const FormContainer = styled.div`
         margin-top: 1.6rem;
       }
     }
+
+    button {
+      padding: 0.4rem 1.6rem;
+      border-radius: 0.8rem;
+      background: #f5f8fa;
+      border: 0.1rem solid var(--border-color);
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 0.8rem;
+    }
+  }
+`;
+
+export const ContactContainer = styled.div`
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    justify-content: space-around;
   }
 `;
 
@@ -66,6 +91,7 @@ export const SocialContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
+  justify-content: space-around;
 
   div {
     display: flex;
@@ -80,7 +106,30 @@ export const SocialContainer = styled.div`
     }
 
     span {
-      font-size: 2rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+
+    div {
+      margin: 1.6rem;
+    }
+
+    div span {
+      display: none;
     }
   }
 `;
+
+export const OpenHoursContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const WeekDays = styled.h4``;
+
+export const WeekHours = styled.p``;
