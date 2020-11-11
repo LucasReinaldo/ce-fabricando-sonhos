@@ -197,7 +197,6 @@ export const Contact = styled.div<UIProps>`
   @media (max-width: 768px) {
     span.icon {
       background: transparent;
-      border-radius: 50%;
       display: flex;
       height: 4.8rem;
       width: 4.8rem;
@@ -206,14 +205,15 @@ export const Contact = styled.div<UIProps>`
       align-items: center;
       color: var(--primary-color);
 
-      flex-flow: column nowrap;
-      transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
-
-      svg {
+      a svg {
         display: flex;
         height: 4.8rem;
         width: 4.8rem;
       }
+    }
+
+    &:hover {
+      background: transparent;
     }
 
     span.text {

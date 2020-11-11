@@ -5,7 +5,6 @@ export const Container = styled.div`
   width: 90%;
   display: flex;
   flex-direction: column;
-  margin-top: 3.2rem;
 `;
 
 export const Description = styled.p`

@@ -77,7 +77,6 @@ export const PathContainer = styled.div`
   background: var(--secondary-color);
   z-index: -2;
   display: flex;
-  margin-top: -1.6rem;
 `;
 
 export const CompanyContainer = styled.div`
