@@ -80,13 +80,7 @@ export default createGlobalStyle`
     // Responsive
   html {
     font-size: 62.5%;
-
-    @media (min-width: 2000px) {
-      body{
-        margin: auto;
-        max-width: 200rem;
-      }
-    }
+    scroll-behavior: smooth;
 
     @media (max-width: 1080px) {
       font-size: 50%;
@@ -97,7 +91,7 @@ export default createGlobalStyle`
     }
 
     @media (max-width: 425px) {
-      font-size: 40%;
+      font-size: 42%;
     }
   }
 `;

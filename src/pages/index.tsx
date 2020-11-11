@@ -51,7 +51,7 @@ export default function Home({
   if (router.isFallback) return <p>Loading...</p>;
   return (
     <>
-      <Container>
+      <Container id="Home">
         <Navbar />
         <Wrapper>
           <Main>
@@ -64,20 +64,20 @@ export default function Home({
                 </Card>
               ))}
             </CardContainer>
-            <PathContainer>
+            <PathContainer id="About">
               <Path routine={routine} afternoon={afternoon} morning={morning} />
             </PathContainer>
             <Image className="second-wave" src="/wave-blue.svg" unsized />
             <CompanyContainer>
               <Company about={about} />
             </CompanyContainer>
-            <ClassesContainer>
+            <ClassesContainer id="Classes">
               <Classes classes={classes} />
             </ClassesContainer>
             <MapContainer>
               <DynamicMap />
             </MapContainer>
-            <FooterContainer>
+            <FooterContainer id="Contact">
               <Footer />
               <DesignedBy />
             </FooterContainer>

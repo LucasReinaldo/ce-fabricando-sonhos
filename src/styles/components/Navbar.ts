@@ -4,16 +4,8 @@ interface UIProps {
   open?: boolean;
 }
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  width: 90%;
-  max-width: 130rem;
-  margin: auto;
-  justify-content: space-between;
-`;
-
 export const Header = styled.nav`
+  background-color: var(--primary-color);
   align-items: flex-start;
   display: flex;
   position: fixed;
@@ -22,34 +14,50 @@ export const Header = styled.nav`
   left: 0;
   right: 0;
   top: 0;
-  background-color: var(--primary-color);
   z-index: 10;
 
   div img {
     display: flex;
     max-width: 6rem;
     cursor: pointer;
+    margin-right: 1.6rem;
   }
 `;
 
-export const MenuHamburguer = styled.div<UIProps>`
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  max-width: 130rem;
+`;
+
+export const Menu = styled.div<UIProps>`
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   div.items-list {
+    flex: 1;
     display: flex;
+
     ul {
+      flex: 1;
       display: flex;
       list-style: none;
       align-items: center;
 
       li {
         display: flex;
-        margin: 0 0.8rem;
+        margin: 0 0.4rem;
       }
 
       a {
         font-weight: 500;
-        padding: 0.8rem 1.6rem;
+        padding: 0.8rem;
         text-transform: uppercase;
-        transition: all 100ms linear 0s;
+        transition: all 1s ease-out;
 
         &:hover {
           background: var(--secondary-shadow);
@@ -101,7 +109,6 @@ export const HamburguerIcon = styled.div<UIProps>`
   z-index: 20;
   display: none;
 
-
   @media (max-width: 768px) {
     display: flex;
     justify-content: space-around;
@@ -110,7 +117,7 @@ export const HamburguerIcon = styled.div<UIProps>`
     div {
       width: 2.2rem;
       height: 0.3rem;
-      background-color: ${({ open }) => (open ? "#FFF" : "#333")};
+      background-color: ${({ open }) => (open ? "#FFF" : "var(--secondary-color)")};
       border-radius: 1rem;
       transform-origin: 0.1rem;
       transition: all 0.3s linear;
@@ -136,20 +143,23 @@ export const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  margin-left: auto;
 
   @media (max-width: 768px) {
     flex-direction: row;
     margin-top: auto;
     margin-bottom: 4rem;
+    margin-left: 0;
   }
 `;
 
-export const Contact = styled.div`
+export const Contact = styled.div<UIProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
   transition: all 100ms linear 0s;
   gap: 0.4rem;
+  padding-right: 0.8rem;
 
   span.icon {
     background: var(--secondary-shadow);
@@ -193,6 +203,9 @@ export const Contact = styled.div`
       justify-content: center;
       align-items: center;
       color: var(--primary-color);
+
+      flex-flow: column nowrap;
+      transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 
       svg {
         display: flex;

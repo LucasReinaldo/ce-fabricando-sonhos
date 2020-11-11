@@ -19,6 +19,7 @@ export default function Map() {
         style={{ width: "100%", height: "100%" }}
         scrollWheelZoom={false}
         doubleClickZoom
+        touchZoom={false}
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

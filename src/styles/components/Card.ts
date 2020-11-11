@@ -1,19 +1,24 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
+  flex: 0 0 auto;
 
-  height: 20rem;
-  width: 20rem;
+  display: inline-flex;
+  height: 18rem;
+  width: 18rem;
 
   background: var(--primary-color);
   border-radius: 1.6rem;
   border: 1px solid var(--border-color);
-  padding: 0.8rem;
-  margin-top: 1.6rem;
+  margin: 1.6rem 0;
 
   /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    height: 13rem;
+    width: 13rem;
+  }
 `;
 
 export const Content = styled.h3`
@@ -21,4 +26,8 @@ export const Content = styled.h3`
   justify-content: center;
   margin: auto;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2.4rem;
+  }
 `;

@@ -6,7 +6,7 @@ import { IoMdCall, IoMdMail } from "react-icons/io";
 import {
   Container,
   Header,
-  MenuHamburguer,
+  Menu,
   HamburguerIcon,
   ContactContainer,
   Contact,
@@ -18,10 +18,10 @@ const Navbar: React.FC = () => {
   return (
     <Header>
       <Container>
-        <Link href="#home">
+        <Link href="#Home">
           <Image src="/logo.png" unsized />
         </Link>
-        <MenuHamburguer open={open}>
+        <Menu open={open}>
           <HamburguerIcon onClick={() => setOpen(!open)}>
             <div />
             <div />
@@ -30,16 +30,16 @@ const Navbar: React.FC = () => {
           <div className="items-list">
             <ul>
               <li>
-                <Link href="#about">sobre</Link>
+                <Link href="#Home">Home</Link>
               </li>
               <li>
-                <Link href="#classes">classes</Link>
+                <Link href="#About">Sobre a creche</Link>
               </li>
               <li>
-                <Link href="#extra-classes">extra-classes</Link>
+                <Link href="#Classes">classes</Link>
               </li>
               <li>
-                <Link href="#contact">contato</Link>
+                <Link href="#Contact">contato</Link>
               </li>
               <ContactContainer>
                 <Contact>
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
               </ContactContainer>
             </ul>
           </div>
-        </MenuHamburguer>
+        </Menu>
       </Container>
     </Header>
   );

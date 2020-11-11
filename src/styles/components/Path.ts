@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const Description = styled.p`
   text-align: justify;
+  font-size: 1.8rem;
 `;
 
 export const Section = styled.div`
