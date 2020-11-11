@@ -44,9 +44,11 @@ export const ImageContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
+  display: flex;
   flex-direction: column;
-  
+
   p {
     text-align: justify;
+    padding: 0.8rem 0;
   }
 `;

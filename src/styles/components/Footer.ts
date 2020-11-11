@@ -62,6 +62,7 @@ export const FormContainer = styled.div`
 
       .input-block + .input-block {
         margin-top: 1.6rem;
+        margin-right: 0.8rem;
       }
     }
 

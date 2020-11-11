@@ -4,13 +4,7 @@ export const Container = styled.div`
   flex: 1;
   display: flex;
   max-width: 144rem;
-  transition: all .8s ease-in-out;
-  scroll-behavior: smooth;
-
-  #Home, #About, #Classes, #Contact {
-  	scroll-behavior: smooth;
-
-  }
+  width: 100vw;
 `;
 
 export const Wrapper = styled.div`
@@ -46,6 +40,8 @@ export const Main = styled.main`
     max-width: 144rem;
     width: 100vw;
     display: flex;
+    z-index: -1;
+    height: 100%;
   }
 `;
 
@@ -57,8 +53,8 @@ export const CardContainer = styled.div`
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 1.6rem 0.8rem;
-    gap: 0.8rem;
+    padding: 1.6rem;
+    gap: 1.6rem;
 
     ::-webkit-scrollbar {
       display: none;
@@ -66,9 +62,9 @@ export const CardContainer = styled.div`
   }
 
   @media (max-width: 425px) {
-    padding: 1.6rem 0.8rem;
+    padding: 1.6rem;
     justify-content: flex-start;
-    gap: 0.8rem;
+    gap: 1.6rem;
     overflow-x: scroll;
 
     ::-webkit-scrollbar {
@@ -81,6 +77,7 @@ export const PathContainer = styled.div`
   background: var(--secondary-color);
   z-index: -2;
   display: flex;
+  margin-top: -1.6rem;
 `;
 
 export const CompanyContainer = styled.div`
@@ -88,6 +85,7 @@ export const CompanyContainer = styled.div`
   color: var(--primary-color);
   display: flex;
   margin-top: -1.6rem;
+  z-index: 2;
 `;
 
 export const ClassesContainer = styled.div`

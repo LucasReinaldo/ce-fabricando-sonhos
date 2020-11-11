@@ -15,6 +15,7 @@ export const Header = styled.nav`
   right: 0;
   top: 0;
   z-index: 10;
+  width: 100vw;
 
   div img {
     display: flex;
