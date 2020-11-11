@@ -77,7 +77,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="icon">
-            <a href="mail:cefabricandosonhos@gmail.com">
+            <a href="mailto:cefabricandosonhos@gmail.com">
               <IoMdMail />
               <span>cefabricandosonhos@gmail.com</span>
             </a>

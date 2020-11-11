@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
                 </Contact>
                 <Contact>
                   <span className="icon">
-                    <a href="mail:cefabricandosonhos@gmail.com">
+                    <a href="mailto:cefabricandosonhos@gmail.com">
                       <IoMdMail />
                     </a>
                   </span>
