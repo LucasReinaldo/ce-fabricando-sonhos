@@ -94,7 +94,7 @@ export const SocialContainer = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
 
-  div {
+  div a {
     display: flex;
     flex-direction: row;
     align-items: center;

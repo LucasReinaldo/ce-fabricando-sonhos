@@ -51,17 +51,17 @@ export const Menu = styled.div<UIProps>`
       li {
         display: flex;
         margin: 0 0.4rem;
-      }
 
-      a {
-        font-weight: 500;
-        padding: 0.8rem;
-        text-transform: uppercase;
-        transition: all 1s ease-out;
+        a {
+          font-weight: 500;
+          padding: 0.8rem;
+          text-transform: uppercase;
+          transition: all 300ms ease-out;
 
-        &:hover {
-          background: var(--secondary-shadow);
-          border-radius: 0.8rem;
+          &:hover {
+            background: var(--secondary-shadow);
+            border-radius: 0.8rem;
+          }
         }
       }
     }
@@ -87,10 +87,10 @@ export const Menu = styled.div<UIProps>`
         font-weight: 500;
         color: var(--primary-color);
         font-size: 2.4rem;
-      }
 
-      a:hover {
-        background: transparent;
+        a:hover {
+          background: transparent;
+        }
       }
 
       li:active {
@@ -117,7 +117,8 @@ export const HamburguerIcon = styled.div<UIProps>`
     div {
       width: 2.2rem;
       height: 0.3rem;
-      background-color: ${({ open }) => (open ? "#FFF" : "var(--secondary-color)")};
+      background-color: ${({ open }) =>
+        open ? "#FFF" : "var(--secondary-color)"};
       border-radius: 1rem;
       transform-origin: 0.1rem;
       transition: all 0.3s linear;
@@ -157,17 +158,17 @@ export const Contact = styled.div<UIProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  transition: all 100ms linear 0s;
   gap: 0.4rem;
   padding-right: 0.8rem;
+  transition: all 300ms ease-out;
 
   span.icon {
     background: var(--secondary-shadow);
     border-radius: 50%;
     display: flex;
-    height: 2.8rem;
-    width: 2.8rem;
-    padding: 0.4rem;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.8rem;
     justify-content: center;
     align-items: center;
 

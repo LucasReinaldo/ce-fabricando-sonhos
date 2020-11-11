@@ -16,6 +16,9 @@ import {
   WeekHours,
 } from "@/styles/components/Footer";
 
+const LAT = 53.3364736;
+const LONG = -6.275072;
+
 export default function Footer() {
   return (
     <Container>
@@ -54,24 +57,46 @@ export default function Footer() {
       <ContactContainer>
         <SocialContainer>
           <div className="icon">
-            <IoLogoInstagram />
-            <span>@cefabricandosonhos</span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/cefabricandosonhos"
+            >
+              <IoLogoInstagram />
+              <span>@cefabricandosonhos</span>
+            </a>
           </div>
           <div className="icon">
-            <IoLogoFacebook />
-            <span>Centro Educacional Fabricando Sonhos</span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/cefabricandosonhos"
+            >
+              <IoLogoFacebook />
+              <span>Centro Educacional Fabricando Sonhos</span>
+            </a>
           </div>
           <div className="icon">
-            <IoMdMail />
-            <span>cefabricandosonhos@gmail.com</span>
+            <a href="mail:cefabricandosonhos@gmail.com">
+              <IoMdMail />
+              <span>cefabricandosonhos@gmail.com</span>
+            </a>
           </div>
           <div className="icon">
-            <IoIosCall />
-            <span>48 3259-1928</span>
+            <a href="tel:4832591928">
+              <IoIosCall />
+              <span>48 3259-1928</span>
+            </a>
           </div>
           <div className="icon">
-            <IoMdMap />
-            <span>Rua Killiano Hammes, 1300</span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://www.google.com/maps/dir/?api=1&destination=${LAT},${LONG}`}
+            >
+              <IoMdMap />
+              <span>Rua Killiano Hammes, 1300</span>
+            </a>
           </div>
         </SocialContainer>
         <OpenHoursContainer>

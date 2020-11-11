@@ -44,13 +44,17 @@ const Navbar: React.FC = () => {
               <ContactContainer>
                 <Contact>
                   <span className="icon">
-                    <IoMdCall />
+                    <a href="tel:4832591928">
+                      <IoMdCall />
+                    </a>
                   </span>
                   <span className="text">48 3259-1928</span>
                 </Contact>
                 <Contact>
                   <span className="icon">
-                    <IoMdMail />
+                    <a href="mail:cefabricandosonhos@gmail.com">
+                      <IoMdMail />
+                    </a>
                   </span>
                   <span className="text">cefabricandosonhos@gmail.com</span>
                 </Contact>
