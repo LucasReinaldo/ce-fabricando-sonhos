@@ -31,7 +31,7 @@ export const Main = styled.main`
     position: absolute;
 
     @media (max-width: 370px) {
-      height: 24rem;
+      height: 32rem;
     }
   }
 
@@ -40,6 +40,9 @@ export const Main = styled.main`
     max-width: 144rem;
     width: 100vw;
     display: flex;
+    position: relative;
+    flex: 1;
+    z-index: -1;
   }
 `;
 
@@ -82,6 +85,8 @@ export const CompanyContainer = styled.div`
   background: var(--quaternary-color);
   color: var(--primary-color);
   display: flex;
+  position: relative;
+  z-index: 1;
   margin-top: -1.6rem;
 `;
 
