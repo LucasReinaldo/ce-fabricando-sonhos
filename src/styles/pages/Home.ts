@@ -40,8 +40,6 @@ export const Main = styled.main`
     max-width: 144rem;
     width: 100vw;
     display: flex;
-    z-index: -1;
-    height: 100%;
   }
 `;
 
@@ -77,6 +75,7 @@ export const PathContainer = styled.div`
   background: var(--secondary-color);
   z-index: -2;
   display: flex;
+  margin-top: -1.6rem;
 `;
 
 export const CompanyContainer = styled.div`
@@ -84,7 +83,6 @@ export const CompanyContainer = styled.div`
   color: var(--primary-color);
   display: flex;
   margin-top: -1.6rem;
-  z-index: 2;
 `;
 
 export const ClassesContainer = styled.div`
