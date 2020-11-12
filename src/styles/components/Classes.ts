@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;
   width: 90%;
   flex-direction: column;
   margin: 3.2rem auto;
@@ -44,6 +43,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
 

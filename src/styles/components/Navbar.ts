@@ -150,7 +150,7 @@ export const ContactContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: row;
     margin-top: auto;
-    margin-bottom: 8rem;
+    margin-bottom: 16rem;
     margin-left: 0;
   }
 `;

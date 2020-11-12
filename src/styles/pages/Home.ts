@@ -57,6 +57,7 @@ export const CardContainer = styled.div`
   @media (max-width: 768px) {
     padding: 1.6rem;
     gap: 1.6rem;
+    justify-content: space-around;
 
     ::-webkit-scrollbar {
       display: none;
