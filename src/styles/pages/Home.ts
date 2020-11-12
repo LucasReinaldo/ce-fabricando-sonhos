@@ -52,6 +52,7 @@ export const CardContainer = styled.div`
   justify-content: center;
   gap: 2.8rem;
   position: relative;
+  white-space: nowrap;
 
   @media (max-width: 768px) {
     padding: 1.6rem;

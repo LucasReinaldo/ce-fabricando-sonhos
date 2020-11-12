@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { Head } from "next/document";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
