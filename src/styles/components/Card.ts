@@ -9,7 +9,7 @@ export const Container = styled.div`
   background: var(--primary-color);
   border-radius: 1.6rem;
   border: 1px solid var(--border-color);
-  margin: 1.6rem 0;
+  margin: 0.8rem;
 
   /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);

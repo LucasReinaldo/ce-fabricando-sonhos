@@ -51,7 +51,6 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2.8rem;
   position: relative;
   white-space: nowrap;
 
