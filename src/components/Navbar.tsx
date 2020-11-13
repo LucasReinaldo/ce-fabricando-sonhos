@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
     <Header>
       <Container>
         <Link href="#Home">
-          <Image src="/logo.png" unsized />
+          <Image src="/logo.png" unsized alt="Logo image" />
         </Link>
         <Menu open={open}>
           <HamburguerIcon onClick={() => setOpen(!open)}>

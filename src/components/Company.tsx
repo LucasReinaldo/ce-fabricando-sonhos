@@ -22,7 +22,7 @@ export default function Company({ about }: CompanyProps) {
         <p>{PrismicDOM.RichText.asText(descricao)}</p>
       </TextContainer>
       <ImageContainer>
-        <Image src={sobre_imagem.url} unsized />
+        <Image src={sobre_imagem.url} unsized alt="Company Image" />
       </ImageContainer>
     </Container>
   );

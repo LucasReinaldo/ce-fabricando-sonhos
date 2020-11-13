@@ -19,7 +19,7 @@ export default function Classes({ classes }: ClassesProps) {
       {classes.map(({ data }, index) => (
         <Section key={index}>
           <ImageContainer>
-            <Image src={data.extra_classes_imagem.url} unsized />
+            <Image src={data.extra_classes_imagem.url} unsized alt="extra-classses-image" />
           </ImageContainer>
           <TextContainer>
             <h1>{PrismicDOM.RichText.asText(data.titulo)}</h1>

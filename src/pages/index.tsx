@@ -58,8 +58,8 @@ export default function Home({
         <Navbar />
         <Wrapper>
           <Main>
-            <Image className="background" src="/background.png" unsized />
-            <Image className="first-wave" src="/wave-orange.svg" unsized />
+            <Image className="background" src="/background.png" unsized alt="Background Image and Logo" />
+            <Image className="first-wave" src="/wave-orange.svg" unsized alt="first wave image" />
             <CardContainer>
               {cards.map(({ data }, index) => (
                 <Card key={index}>
@@ -70,7 +70,7 @@ export default function Home({
             <PathContainer id="About">
               <Path routine={routine} afternoon={afternoon} morning={morning} />
             </PathContainer>
-            <Image className="second-wave" src="/wave-blue.svg" unsized />
+            <Image className="second-wave" src="/wave-blue.svg" unsized alt="second wave image" />
             <CompanyContainer>
               <Company about={about} />
             </CompanyContainer>
