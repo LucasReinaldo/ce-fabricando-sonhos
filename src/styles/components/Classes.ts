@@ -31,7 +31,6 @@ export const Section = styled.div`
 
 export const ImageContainer = styled.div`
   img {
-    flex: 1;
     display: flex;
     width: auto;
     max-width: 54rem;
@@ -43,7 +42,6 @@ export const ImageContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
 

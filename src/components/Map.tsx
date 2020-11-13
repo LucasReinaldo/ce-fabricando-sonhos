@@ -6,6 +6,7 @@ import {
   TextTyle,
   Text,
 } from "@/styles/components/Map";
+import mapIcon from "@/utils/mapIcon";
 
 const LAT = 53.3364736;
 const LONG = -6.275072;
@@ -17,15 +18,16 @@ export default function Map() {
         center={[LAT, LONG]}
         zoom={15}
         style={{ width: "100%", height: "100%" }}
-        scrollWheelZoom={false}
-        doubleClickZoom
+        dragging={false}
         touchZoom={false}
+        scrollWheelZoom={false}
+        doubleClickZoom={false}
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url={`https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.NEXT_PUBLIC_REACT_APP_TILE_LAYER_MAP}`}
         />
-        <Marker position={[LAT, LONG]}>
+        <Marker icon={mapIcon} position={[LAT, LONG]}>
           <Popup zoomAnimation autoPan>
             Olá! Venha nos visitar.
           </Popup>

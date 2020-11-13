@@ -31,7 +31,7 @@ export const Main = styled.main`
     position: absolute;
 
     @media (max-width: 370px) {
-      height: 32rem;
+      height: 34rem;
     }
   }
 
@@ -47,6 +47,7 @@ export const Main = styled.main`
 `;
 
 export const CardContainer = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;

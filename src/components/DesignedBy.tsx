@@ -5,7 +5,15 @@ export default function DesignedBy() {
   return (
     <Container>
       Design with <IoIosHeart size={16} color="red" /> by
-      <h5>Lucas Reinaldo.</h5>
+      <h5>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/LucasReinaldo"
+        >
+          Lucas Reinaldo.
+        </a>
+      </h5>
     </Container>
   );
 }

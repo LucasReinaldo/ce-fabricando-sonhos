@@ -5,7 +5,7 @@ export const Container = styled.div`
   margin: auto;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 1.2rem;
   padding: 1.6rem;
   background-color: #002335;
 `;
