@@ -56,8 +56,7 @@ export const CardContainer = styled.div`
   white-space: nowrap;
 
   @media (max-width: 768px) {
-    padding: 1.6rem;
-    gap: 1.6rem;
+    padding: 1.2rem;
     justify-content: space-around;
 
     ::-webkit-scrollbar {
@@ -68,7 +67,6 @@ export const CardContainer = styled.div`
   @media (max-width: 425px) {
     padding: 1.6rem;
     justify-content: flex-start;
-    gap: 1.6rem;
     overflow-x: scroll;
 
     ::-webkit-scrollbar {
