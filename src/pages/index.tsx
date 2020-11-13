@@ -27,6 +27,7 @@ import {
   MapContainer,
   FooterContainer,
 } from "@/styles/pages/Home";
+import SEO from "./SEO";
 
 interface HomeProps {
   cards: Document[];
@@ -52,6 +53,7 @@ export default function Home({
   if (router.isFallback) return <p>Loading...</p>;
   return (
     <>
+      <SEO />
       <Container id="Home">
         <Navbar />
         <Wrapper>
