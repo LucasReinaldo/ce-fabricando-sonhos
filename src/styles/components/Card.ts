@@ -9,7 +9,7 @@ export const Container = styled.div`
   background: var(--primary-color);
   border-radius: 1.6rem;
   border: 1px solid var(--border-color);
-  margin: 0.8rem;
+  margin: 1.6rem;
 
   /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
@@ -18,6 +18,7 @@ export const Container = styled.div`
     height: 13rem;
     width: 13rem;
     justify-content: space-around;
+    margin: 0.8rem;
   }
 `;
 
